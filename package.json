@@ -1,7 +1,7 @@
 {
   "name": "@magicorn/sdk",
   "license": "AGPL-3.0-or-later",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An SDK for building applications on top of MagicornFi",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
