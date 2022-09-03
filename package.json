@@ -1,0 +1,104 @@
+{
+  "name": "@magicorn/sdk",
+  "license": "AGPL-3.0-or-later",
+  "version": "1.0.1",
+  "description": "An SDK for building applications on top of MagicornFi",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/magicornfinance/magiswap-sdk.git",
+  "keywords": [
+    "magicorn",
+    "ethereum",
+    "magicdao",
+    "magicbridge"
+  ],
+  "module": "dist/sdk.esm.js",
+  "scripts": {
+    "lint": "eslint src/ --ext .ts",
+    "lint:fix": "eslint src/ --ext .ts --fix",
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "docker:up": "docker-compose up -d",
+    "docker:restart": "docker-compose restart",
+    "docker:clean": "docker-compose kill",
+    "install-peers": "install-peers",
+    "prepare": "install-peers",
+    "graphql:codegen": "graphql-codegen --config graphql-codegen.yml",
+    "codegen:cow": "./node_modules/.bin/ts-node --project tsconfig.json ./bin/cow-app-data.ts"
+  },
+  "dependencies": {
+    "@cowprotocol/cow-sdk": "^0.0.15",
+    "@ethersproject/abi": "^5.6.4",
+    "@ethersproject/address": "^5.4.0",
+    "@ethersproject/bignumber": "^5.4.0",
+    "@ethersproject/constants": "^5.4.0",
+    "@ethersproject/contracts": "^5.4.0",
+    "@ethersproject/networks": "^5.6.4",
+    "@ethersproject/providers": "^5.4.0",
+    "@ethersproject/solidity": "^5.4.0",
+    "@ethersproject/transactions": "^5.4.0",
+    "@ethersproject/units": "^5.4.0",
+    "@swapr/core": "^0.3.20",
+    "@swapr/periphery": "^0.3.23",
+    "@uniswap/smart-order-router": "^2.8.2",
+    "big.js": "^5.2.2",
+    "dayjs": "^1.11.0",
+    "debug": "^4.3.4",
+    "decimal.js-light": "^2.5.1",
+    "graphql-request": "^4.3.0",
+    "jsbi": "^3.1.1",
+    "lodash.flatmap": "^4.5.0",
+    "node-fetch": "2",
+    "tiny-invariant": "^1.2.0",
+    "tiny-warning": "^1.0.3",
+    "toformat": "^2.0.0",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/typescript": "2.5.1",
+    "@graphql-codegen/typescript-graphql-request": "^4.4.10",
+    "@graphql-codegen/typescript-operations": "^2.4.2",
+    "@types/big.js": "^4.0.5",
+    "@types/debug": "^4.1.7",
+    "@types/jest": "^27.0.0",
+    "@types/lodash.flatmap": "^4.5.6",
+    "@types/node-fetch": "^2.6.1",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.30.5",
+    "@uniswap/sdk-core": "^3.0.1",
+    "@uniswap/v3-sdk": "^3.8.3",
+    "babel-plugin-transform-jsbi-to-bigint": "^1.4.0",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "install-peers-cli": "^2.2.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4",
+    "yargs": "^17.5.1"
+  },
+  "peerDependencies": {
+    "ethers": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true
+  },
+  "resolutions": {
+    "@ethersproject/providers": "^5.4.0"
+  }
+}
