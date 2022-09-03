@@ -46,7 +46,7 @@
     "@swapr/periphery": "^0.3.23",
     "@uniswap/smart-order-router": "^2.8.2",
     "big.js": "^5.2.2",
-    "dayjs": "^1.11.0",
+    "dayjs": "^1.11.5",
     "debug": "^4.3.4",
     "decimal.js-light": "^2.5.1",
     "graphql-request": "^4.3.0",
