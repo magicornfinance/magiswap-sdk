@@ -1,4 +1,4 @@
-# magicorn SDK
+# unicorn Core SDK of #Magicorn ecosystems.
 
 ## Getting Started
 
