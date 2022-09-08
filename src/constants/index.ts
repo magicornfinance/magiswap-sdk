@@ -17,9 +17,9 @@ export enum Rounding {
   ROUND_UP,
 }
 
-export const SWPR_WHITELIST_IPFS_HASH = 'QmcjTAvDJZU339jrc9Ky2pXKR68R1SjnwdyGSQjt1kad9r'
+export const MAGIC_WHITELIST_IPFS_HASH = ''
 
-export const INIT_CODE_HASH = '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776'
+export const INIT_CODE_HASH = '0x0b7a4db050c9e5ad838771dcc444ba8c8dbd7c4f55ff66cc0d669555518a407a'
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
@@ -37,5 +37,5 @@ export const _100 = JSBI.BigInt(100)
 export const _1000 = JSBI.BigInt(1000)
 export const _10000 = JSBI.BigInt(10000)
 
-export const defaultSwapFee = _25
+export const defaultSwapFee = _15
 export const defaultProtocolFeeDenominator = FIVE

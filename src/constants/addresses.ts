@@ -7,7 +7,7 @@ import {
   mainnet as coreMainnet,
   rinkeby as coreRinkeby,
   xdai as coreXDai,
-} from '@swapr/core/.contracts.json'
+} from '@magicorn/core/.contracts.json'
 import {
   arbitrumGoerliTestnet as peripheryArbitrumGoerliTestnet,
   arbitrumOne as peripheryArbitrumOne,
@@ -16,21 +16,16 @@ import {
   mainnet as peripheryMainnet,
   rinkeby as peripheryRinkeby,
   xdai as peripheryXDai,
-} from '@swapr/periphery/.contracts.json'
+} from '@magicorn/periphery/.contracts.json'
 
 import { ChainId } from './chains'
 
 const emptyAddressList: Record<ChainId, string> = {
   [ChainId.MAINNET]: AddressZero,
-  [ChainId.RINKEBY]: AddressZero,
-  [ChainId.ARBITRUM_ONE]: AddressZero,
-  [ChainId.ARBITRUM_RINKEBY]: AddressZero,
-  [ChainId.ARBITRUM_GOERLI]: AddressZero,
-  [ChainId.XDAI]: AddressZero,
+  [ChainId.BSC]: AddressZero,
   [ChainId.POLYGON]: AddressZero,
-  [ChainId.GOERLI]: AddressZero,
-  [ChainId.OPTIMISM_MAINNET]: AddressZero,
-  [ChainId.OPTIMISM_GOERLI]: AddressZero,
+  [ChainId.AVAX]: AddressZero,
+
 }
 
 /**
@@ -39,12 +34,9 @@ const emptyAddressList: Record<ChainId, string> = {
 export const FACTORY_ADDRESS: Record<ChainId, string> = {
   ...emptyAddressList,
   [ChainId.MAINNET]: coreMainnet.factory,
-  [ChainId.RINKEBY]: coreRinkeby.factory,
-  [ChainId.ARBITRUM_ONE]: coreArbitrumOne.factory,
-  [ChainId.ARBITRUM_RINKEBY]: coreArbitrumRinkebyTestnet.factory,
-  [ChainId.ARBITRUM_GOERLI]: coreArbitrumGoerliTestnet.factory,
-  [ChainId.XDAI]: coreXDai.factory,
-  [ChainId.GOERLI]: coreGoerli.factory,
+  [ChainId.BSC]: coreBsc.factory,
+  [ChainId.POLYGON]: corePolygon.factory,
+  [ChainId.AVAX]: coreAvax.factory,
 }
 
 /**
@@ -52,13 +44,10 @@ export const FACTORY_ADDRESS: Record<ChainId, string> = {
  */
 export const ROUTER_ADDRESS: Record<ChainId, string> = {
   ...emptyAddressList,
-  [ChainId.RINKEBY]: peripheryRinkeby.router,
+  [ChainId.BSC]: peripheryBSC.router,
   [ChainId.MAINNET]: peripheryMainnet.router,
-  [ChainId.XDAI]: peripheryXDai.router,
-  [ChainId.ARBITRUM_ONE]: peripheryArbitrumOne.router,
-  [ChainId.ARBITRUM_RINKEBY]: peripheryArbitrumRinkebyTestnet.router,
-  [ChainId.ARBITRUM_GOERLI]: peripheryArbitrumGoerliTestnet.router,
-  [ChainId.GOERLI]: peripheryGoerli.router,
+  [ChainId.POLYGON]: peripheryPOLYGON.router,
+  [ChainId.AVAX]: peripheryAvax.router,
 }
 
 /**

@@ -14,13 +14,7 @@ export const CODE_TO_PLATFORM_NAME: { [apiName: string]: string } = {
 
 export const ZEROX_API_URL: Record<ChainId, string> = {
   [ChainId.MAINNET]: 'https://api.0x.org/',
-  [ChainId.RINKEBY]: '',
-  [ChainId.ARBITRUM_ONE]: '',
-  [ChainId.ARBITRUM_RINKEBY]: '',
-  [ChainId.ARBITRUM_GOERLI]: '',
-  [ChainId.XDAI]: '',
+  [ChainId.BSC]: 'https://bsc.api.0x.org/',
   [ChainId.POLYGON]: 'https://polygon.api.0x.org/',
-  [ChainId.GOERLI]: '',
-  [ChainId.OPTIMISM_MAINNET]: 'https://optimism.api.0x.org/',
-  [ChainId.OPTIMISM_GOERLI]: '',
+  [ChainId.AVAX]: 'https://avax.api.0x.org/',
 }
